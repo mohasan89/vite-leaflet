@@ -1,0 +1,46 @@
+@import "leaflet/dist/leaflet.css";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  .layout {
+    height: 100%;
+    .table-side {
+      background-color: inherit;
+      padding: 10px 5px;
+      .row-class {
+        cursor: pointer;
+      }
+    }
+    .map-content {
+      height: 100%;
+      .leaflet-map {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+      }
+      .loading-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 500;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      .error-text {
+        position: absolute;
+        top: 2%;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 500;
+      }
+    }
+  }
+}
