@@ -2,7 +2,7 @@ export type Point = { lat: number; lng: number };
 
 const loadRoute = async (start: Point, end: Point) =>
   fetch(
-    `http://router.project-osrm.org/route/v1/car/${start.lng},${start.lat};${end.lng},${end.lat}?geometries=geojson`,
+    `https://router.project-osrm.org/route/v1/car/${start.lng},${start.lat};${end.lng},${end.lat}?geometries=geojson`,
     { headers: { "Content-type": "application/json" } }
   )
     .then((res) => res.json())
